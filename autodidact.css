@@ -1,0 +1,61 @@
+
+.content {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.header, .main, .aside, .footer {
+	padding: 20px;
+}
+
+.header {
+	background: lightblue;
+	flex-basis: 20px;
+}
+
+.main {
+	background: slateblue;
+	flex-basis: 300px;
+	flex-grow: 2;
+	flex-shrink: 0;
+}
+
+.aside {
+	background: darkblue;
+	flex-basis: 200px;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.footer {
+	background: pink;
+	flex-grow: 1;
+	
+}
+
+@media screen and (min-width: 700px) {
+	.content {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.main, .aside {
+		height: 710px;
+	}
+	.header {
+		flex-basis: 100%;
+		max-height: 60px;
+	}
+
+	.main {
+		flex-grow: 4;
+	}
+
+	.aside {
+		flex-grow: 1;
+	}
+
+	.footer {
+		flex-basis: 100%;
+	}
+}
